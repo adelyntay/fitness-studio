@@ -5,6 +5,7 @@
       <th>Class Type</th>
       <th>Instructor</th>
       <th>Level</th>
+      <th>Date</th>
       <th>Duration</th>
     </tr>
   </thead>
@@ -14,7 +15,11 @@
         <td><%= m.classType %></td>
         <td><%= m.instructor %></td>
         <td><%= m.level %></td>
+        <td><%= m.date %></td>
         <td><%= m.duration %></td>
+       <td><form action="/class/<%= m._id %>?_method=DELETE" method="POST">
+          <button>Delete</button>
+        </form></td> 
       </tr>
       <% }); %>
   </tbody>

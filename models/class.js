@@ -14,6 +14,10 @@ const classSchema = new Schema({
     type: String,
     enum: ['Beginner', 'Intermediate', 'Beast']
     },
+  date: {
+    type: Date,
+    timezone: false,
+  },
   duration: Number,
 },{
 });
