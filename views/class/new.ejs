@@ -1,0 +1,37 @@
+<h2>Enter a New Class</h2>
+
+<form action="/class" method="POST">
+
+  <label>Class Type:
+    <select name="class">
+      <option value="Yoga">Yoga</option>
+      <option value="Pilates">Pilates</option>
+      <option value="Cycle">Cycle</option>
+      <option value="BodyCombat">BodyCombat</option>
+    </select>
+  </label><br />
+
+  <label>Instructor
+    <select name="instructor">
+      <option value="Harry">Harry</option>
+      <option value="Hermione">Hermione</option>
+      <option value="Voldemort">Voldemort</option>
+      <option value="Snape">Snape</option>
+      <option value="Ron">Ron</option>
+    </select>
+  </label><br />
+
+  <label>Level
+    <select name="level">
+      <option value="Beginner">Beginner</option>
+      <option value="Intermediate">Intermediate</option>
+      <option value="Beast">Beast</option>
+    </select>
+  </label><br />
+
+  <label>Duration:
+    <input type="number" name="duration">
+  </label><br />
+
+  <button type="submit">Add Class</button>
+</form>
