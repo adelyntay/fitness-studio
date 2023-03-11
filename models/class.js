@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 const classSchema = new Schema({
   classType: {
     type: String,
-    enum: ['Yoga', 'Pilates', 'Cycle', 'BodyCombat'],
+    enum: ['Yoga', 'Pilates', 'Cycle', 'BodyCombat']
   },
   instructor: {
     type: String,
-    enum: ['Harry', 'Hermione', 'Voldemort', 'Snape', 'Ron'],
+    enum: ['Harry', 'Hermione', 'Voldemort', 'Snape', 'Ron']
   },
   level: {
     type: String,
@@ -16,9 +16,12 @@ const classSchema = new Schema({
     },
   date: {
     type: Date,
-    timezone: false,
+    timezone: false
   },
-  duration: Number,
+  duration: {
+    type: String,
+    default: '45 mins'
+  }
 },{
 });
 

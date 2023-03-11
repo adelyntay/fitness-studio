@@ -4,8 +4,9 @@ module.exports = {
 	new: newClass,
   create,
   index,
-  update,
-  delete: del
+  delete: del,
+  edit,
+  update
 };
 
 function newClass(req, res) {
@@ -27,12 +28,6 @@ async function index(req, res) {
   res.render('class/all', { title: 'All Classes', classes });
 }
 
-async function update(req, res) {
-  const { classId } = req.params;
-  const updatedClass = await Class.findByIdAndUpdate(classId, req.body, { new: true });
-  res.status(200).json(updatedClass);
-}
-
 async function del(req, res) {
   try {
     const { id } = req.params;
@@ -48,3 +43,27 @@ async function del(req, res) {
     res.status(500).send('Server error');
   }
 }
+
+async function edit(req, res) {
+  const { id } = req.params; 
+
+  try {
+    const classes = await Class.findById(id).exec();
+    const context = { id, classes };
+    res.render('class/edit', context);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+async function update(req, res) {
+  const { id } = req.params;
+  const { classType, instructor, level, date } = req.body;
+
+  try {
+    await Class.updateOne({ _id: id }, { classType, instructor, level, date });
+    res.redirect(`/class/${id}`);
+  } catch (error) {
+    console.log(error);
+  }
+};

@@ -8,6 +8,8 @@ router.get('/new', classesCtrl.new);
 
 router.post('/', classesCtrl.create);
 
+router.get('/:id', classesCtrl.edit)
+
 router.put('/:id', classesCtrl.update);
 
 router.delete('/:id', classesCtrl.delete);
