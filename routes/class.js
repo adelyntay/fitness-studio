@@ -14,4 +14,6 @@ router.put('/:id', classesCtrl.update);
 
 router.delete('/:id', classesCtrl.delete);
 
+router.get('/details/:id', classesCtrl.show);
+
 module.exports = router;

@@ -6,7 +6,8 @@ module.exports = {
   index,
   delete: del,
   edit,
-  update
+  update,
+  show
 };
 
 function newClass(req, res) {
@@ -67,3 +68,13 @@ async function update(req, res) {
     console.log(error);
   }
 };
+
+async function show(req, res) {
+  try {
+    const classes = await Class.findById(req.params.id);
+    res.render('class/show', { title: 'Class Detail', classes });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server Error');
+  }
+}
