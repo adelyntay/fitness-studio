@@ -7,7 +7,7 @@ module.exports = {
   delete: del,
   edit,
   update,
-  show
+  show,
 };
 
 function newClass(req, res) {

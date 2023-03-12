@@ -16,15 +16,6 @@ function register(req, res) {
     res.render('user/register');
   }
 
-// async function create(req, res) {
-//   try {
-//     const register = await User.create(req.body);
-//     res.redirect('user/login');
-//   } catch (err) {
-//     console.error(err);
-//   }
-// }
-
 async function create(req, res) {
   try {
     const { password } = req.body;
