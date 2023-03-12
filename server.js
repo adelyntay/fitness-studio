@@ -10,7 +10,7 @@ require('./config/database');
 
 var indexRouter = require('./routes/index');
 var classRouter = require('./routes/class');
-var loginRouter = require('./routes/login');
+var userRouter = require('./routes/user');
 
 var app = express();
 
@@ -27,7 +27,7 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/class', classRouter);
-app.use('/login', loginRouter);
+app.use('/user', userRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
