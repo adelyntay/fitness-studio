@@ -7,7 +7,7 @@
       register,
       create,
       login,
-      secret,
+      // secret,
       homepage
   };
 
@@ -53,8 +53,9 @@
   
     bcrypt.compare(password, user.password, (err, result) => {
       if (result) {
-        req.session.anything = email;
-        res.redirect('/user/homepage'); 
+        req.session.user = user;
+        const redirectUrl = user.role === 'admin' ? '/admin' : '/user/homepage';
+        res.redirect(redirectUrl); 
       } else {
         const context = { msg: 'password wrong' };
         res.render('user/login', context);
@@ -62,12 +63,12 @@
     });
   }
   
-  function secret(req, res) {
-    console.log('session:', req.session.anything);
-    if (req.session.anything) {
-      res.send('Secret Page');
-    } else {
-      res.send('Sorry');
-    }
-  }
+  // function secret(req, res) {
+  //   console.log('session:', req.session.anything);
+  //   if (req.session.anything) {
+  //     res.send('Secret Page');
+  //   } else {
+  //     res.send('Sorry');
+  //   }
+  // }
   

@@ -15,12 +15,9 @@
       <tr>
         <td><%= m.classType %></td>
         <td><%= m.instructor %></td>
+        <td><%= m.level %></td>
         <td><%= m.date %></td>
-        <td><a href="/class/details/<%= m.id %>">Details</a></td>
-        <td>
-          <% const classLink = `/class/${m._id}`%>
-          <a href="<%=classLink%>">Edit</a>
-        </td>
+        <td><%= m.duration %></td>
       </tr>
       <% }); %>
   </tbody>
