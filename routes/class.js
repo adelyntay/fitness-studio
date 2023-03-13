@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var classesCtrl = require('../controllers/class');
-var { isAdmin } = require('../middlewares/auth');
+// var { isAdmin } = require('../middlewares/auth');
 
-router.use(isAdmin);
+// router.use(isAdmin);
 
 router.get('/all', classesCtrl.index);
 

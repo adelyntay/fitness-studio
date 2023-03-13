@@ -1,0 +1,27 @@
+<h2>Class List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Class Type</th>
+      <th>Instructor</th>
+      <th>Level</th>
+      <th>Date</th>
+      <th>Duration</th>
+      <th>Register</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% classes.forEach(function(m) { %>
+      <tr>
+        <td><%= m.classType %></td>
+        <td><%= m.instructor %></td>
+        <td><%= m.date %></td>
+        <td><a href="/class/details/<%= m.id %>">Details</a></td>
+        <td>
+          <% const classLink = `/class/${m._id}`%>
+          <a href="<%=classLink%>">Edit</a>
+        </td>
+      </tr>
+      <% }); %>
+  </tbody>
+</table>
