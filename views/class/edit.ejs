@@ -2,7 +2,12 @@
 <form action="/class/<%=id%>?_method=PUT" method="POST">
 
     <label>Class Type:
-      <input type="text" name="classType">
+      <select name="classType">
+        <option value="Yoga">Yoga</option>
+        <option value="Pilates">Pilates</option>
+        <option value="Cycle">Cycle</option>
+        <option value="BodyCombat">BodyCombat</option>
+      </select>
     </label><br />
 
     <label>Instructor:
