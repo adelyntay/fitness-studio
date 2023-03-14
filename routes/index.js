@@ -15,5 +15,20 @@ router.get('/list', async function(req, res) {
     res.render('list', { classes });
 });
 
+router.get('/register/:id', async function(req, res, next) {
+  const Class = require('../models/class');
+  const classDoc = await Class.findById(req.params.id);
+  res.render('register', { classDoc });
+});
+
+router.post('/register/:id', async function(req, res) {
+  const Class = require('../models/class');
+  const { name, email } = req.body;
+  const classDoc = await Class.findById(req.params.id);
+  const registration = { name, email };
+  classDoc.registration.push(registration);
+  await classDoc.save();
+  res.redirect('/list');
+});
 
 module.exports = router;

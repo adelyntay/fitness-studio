@@ -1,4 +1,6 @@
-<h1>Sign in</h1>
+<%- include('../partials/header') %>
+
+<h1>Login</h1>
 <form action="/user/login" method="post">
     <section>
         <label for="username">Username</label>
@@ -8,6 +10,6 @@
         <label for="current-password">Password</label>
         <input id="current-password" name="password" type="password" autocomplete="current-password" required>
     </section>
-    <button type="submit">Sign in</button><br>
-    <a href="/user/register">Register</a>
+    <button type="submit">Login</button><br>
+    <a href="/user/signup">Sign Up</a>
 </form>

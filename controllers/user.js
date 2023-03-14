@@ -4,7 +4,7 @@
 
   module.exports = {
       loginPage,
-      register,
+      signup,
       create,
       login,
       // secret,
@@ -15,8 +15,8 @@
     res.render('user/login');
   }
 
-  function register(req, res) {
-      res.render('user/register');
+  function signup(req, res) {
+      res.render('user/signup');
     }
 
     function homepage(req, res) {

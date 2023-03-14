@@ -4,7 +4,7 @@ var userCtrl = require('../controllers/user')
 
 router.get('/login', userCtrl.loginPage);
 
-router.get('/register', userCtrl.register);
+router.get('/signup', userCtrl.signup);
 
 router.post('/', userCtrl.create);
 

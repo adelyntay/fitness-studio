@@ -1,7 +1,6 @@
-<h2>Register</h2>
+<h2>Book Class</h2>
 
-<form action="/class/<%= class._id %>/register" method="POST">
-
+<form action="/register/<%= classDoc._id %>" method="POST">
     <label>Name:
         <input type="text" name="name">
       </label><br />
@@ -11,5 +10,4 @@
       </label><br />
 
   <button type="Register">Register</button>
-
 </form>

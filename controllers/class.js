@@ -71,8 +71,12 @@ async function update(req, res) {
 
 async function show(req, res) {
   try {
-    const classes = await Class.findById(req.params.id);
-    res.render('class/show', { title: 'Class Detail', classes });
+    const classId = req.params.id;
+    const classes = await Class.findById(classId);
+    const registeredMembers = classes.registration.map(reg => {
+      return { name: reg.name, email: reg.email };
+    });
+    res.render('class/show', { title: 'Class Detail', classes, registeredMembers, id: classId });
   } catch (err) {
     console.error(err);
     res.status(500).send('Server Error');

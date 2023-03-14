@@ -7,7 +7,8 @@ const registrationSchema = new Schema({
     required: true
   },
   email: {
-    type: String
+    type: String,
+    required: true
   }
 });
 
@@ -29,7 +30,7 @@ const classSchema = new Schema({
     timezone: false
   },
   duration: {
-    type: String,
+    type: String, //number
     default: '45 mins'
   },
   registration: [registrationSchema]

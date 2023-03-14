@@ -12,7 +12,6 @@ require('./config/database');
 var indexRouter = require('./routes/index');
 var classRouter = require('./routes/class');
 var userRouter = require('./routes/user');
-var registerRouter = require('./routes/register');
 
 var app = express();
 
@@ -35,7 +34,6 @@ app.use(session({
 app.use('/', indexRouter);
 app.use('/class', classRouter);
 app.use('/user', userRouter);
-app.use('./register', registerRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

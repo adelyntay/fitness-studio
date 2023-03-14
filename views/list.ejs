@@ -11,15 +11,14 @@
     </tr>
   </thead>
   <tbody>
-    <% classes.forEach(function(m) { %>
+    <% classes.forEach(function(classDoc) { %>
       <tr>
-        <td><%= m.classType %></td>
-        <td><%= m.instructor %></td>
-        <td><%= m.level %></td>
-        <td><%= m.date %></td>
-        <td><%= m.duration %></td>
-        <td><% const registerLink = null %>
-          <a href="<%=registerLink%>">Register</a></td>
+        <td><%= classDoc.classType %></td>
+        <td><%= classDoc.instructor %></td>
+        <td><%= classDoc.level %></td>
+        <td><%= classDoc.date %></td>
+        <td><%= classDoc.duration %></td>
+        <td><a href="/register/<%= classDoc._id %>">Register</a></td>
       </tr>
       <% }); %>
   </tbody>
