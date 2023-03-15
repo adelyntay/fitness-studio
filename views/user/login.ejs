@@ -1,15 +1,16 @@
 <%- include('../partials/header') %>
 
-<h1>Login</h1>
-<form action="/user/login" method="post">
+<form action="/user/login" method="post" class="loginContainer">
+    <h1 class="loginHeader">Login</h1>
     <section>
-        <label for="username">Username</label>
-        <input id="username" name="email" type="text" autocomplete="username" required autofocus>
+        <input class="email" name="email" type="text" autocomplete="username" placeholder="email" required autofocus>
     </section>
+    <br/><br/>
     <section>
-        <label for="current-password">Password</label>
-        <input id="current-password" name="password" type="password" autocomplete="current-password" required>
+        <input class="current-password" name="password" type="password" autocomplete="current-password" placeholder="password" required>
     </section>
-    <button type="submit">Login</button><br>
-    <a href="/user/signup">Sign Up</a>
+    <br/>
+    <button id ="login" type="submit">Login</button>
+    <br/><br/>
+    <p id="notMember">Not a member? <a href="/user/signup">Signup now</a></p>
 </form>

@@ -1,8 +1,69 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #2c1e4a;
 }
 
 a {
   color: #00B7FF;
 }
+
+.loginContainer {
+  width: 400px;
+  height: 450px;
+  margin-top: 50px;
+  margin-left: 450px;
+  background-color: white;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.loginHeader {
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.email {
+  width: 250px;
+  height: 50px;
+  border: 2px solid #f8f8ff;
+  text-align: center;
+}
+
+.current-password {
+  width: 250px;
+  height: 50px;
+  border: 2px solid #f8f8ff;
+  text-align: center;
+}
+
+#login {
+  width: 250px;
+  border: none; 
+  background-color: #5e376d;
+  color: white;
+  padding: 8px 32px;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+#notMember {
+  margin-top: 30px;
+}
+
+.role {
+  border: 2px solid #f8f8ff;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+}
+
+#signup {
+  width: 250px;
+  border: none; 
+  background-color: #5e376d;
+  color: white;
+  padding: 8px 32px;
+  font-size: 18px;
+}
+
