@@ -10,10 +10,16 @@ router.get('/admin', function(req, res, next) {
 });
 
 router.get('/list', async function(req, res) {
-    const Class = require('../models/class');
-    const classes = await Class.find({});
-    res.render('list', { classes });
+  const Class = require('../models/class');
+  const filter = req.query.classType || '';
+  const classes = await Class.find(filter ? { classType: filter } : {}).exec();
+  const classTypes = await Class.distinct('classType').exec();
+  res.render('list', { classes, classTypes, selectedFilter: filter });
 });
+
+/* const classes = await Class.find(filter ? { classType: filter } : {}).exec();
+const classTypes = await Class.distinct('classType').exec();
+res.render('class/all', { title: 'All Classes', classes, classTypes, selectedFilter: filter });*/
 
 router.get('/register/:id', async function(req, res, next) {
   const Class = require('../models/class');

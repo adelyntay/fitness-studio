@@ -30,7 +30,7 @@ const classSchema = new Schema({
     timezone: false
   },
   duration: {
-    type: String, //number
+    type: String, 
     default: '45 mins'
   },
   registration: [registrationSchema]

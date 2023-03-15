@@ -25,8 +25,10 @@ async function create(req, res) {
   }
   
 async function index(req, res) {
-  const classes = await Class.find({});
-  res.render('class/all', { title: 'All Classes', classes });
+  const filter = req.query.classType || '';
+  const classes = await Class.find(filter ? { classType: filter } : {}).exec();
+  const classTypes = await Class.distinct('classType').exec();
+  res.render('class/all', { title: 'All Classes', classes, classTypes, selectedFilter: filter });
 }
 
 async function del(req, res) {
