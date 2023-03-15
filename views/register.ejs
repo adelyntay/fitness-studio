@@ -1,13 +1,16 @@
-<h2>Book Class</h2>
+<%- include('./partials/header') %>
+
+<h2 id="bookClass">Book Class</h2>
 
 <form action="/register/<%= classDoc._id %>" method="POST">
-    <label>Name:
-        <input type="text" name="name">
-      </label><br />
+    
+  <input class="registerField" type="text" name="name" placeholder="name">
+  <br /><br/>
 
-      <label>Email:
-        <input type="text" name="email">
-      </label><br />
+    
+  <input class="registerField" type="text" name="email" placeholder="email">
+  <br/><br />
 
-  <button type="Register">Register</button>
+  <button id="bookClassBtn" type="Register">Register</button>
+
 </form>

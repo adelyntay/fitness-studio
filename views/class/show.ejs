@@ -1,18 +1,17 @@
+<%- include('../partials/header') %>
+
 <section id="show-page">
-    <div>Class Type: </div>
-    <div><%= classes.classType %></div>
-    <div>Instructor: </div>
-    <div><%= classes.instructor %></div>
-    <div>Level: </div>
-    <div><%= classes.level %></div>
-    <div>Date: </div>
-    <div><%= classes.date %></div>
-    <div>Duration: </div>
-    <div><%= classes.duration %></div>
+    <p>Class Type: <%= classes.classType %></p> 
+    <p>Instructor: <%= classes.instructor %></p> 
+    <p>Level: <%= classes.level %></p> 
+    <p>Date: <%= classes.date %></p> 
+    <p>Duration: <%= classes.duration %></p> 
   </section>
   
-  <br><br><h2>Registered Members</h2>
-  <table>
+  <br/><br/>
+
+  <h2 id="registered">Registered Members</h2>
+  <table id="registeredMember">
     <thead>
       <tr>
         <th>Name</th>

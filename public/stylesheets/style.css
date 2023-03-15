@@ -67,3 +67,137 @@ a {
   font-size: 18px;
 }
 
+/* views/class/all  */
+
+#timetable {  
+  border-collapse: collapse;
+  border: 1px solid #ddd;;
+  width: 100%;
+}
+
+#timetable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+#timetable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+#allClasses {
+  color: white;
+}
+
+#delete{
+  border-radius: 20px;
+  border: none;
+  background-color: red;
+  color: white;
+}
+
+/* views/class/show  */
+
+#registeredMember {  
+  border-collapse: collapse;
+  border: 1px solid #ddd;;
+  width: 100%;
+}
+
+#registeredMember th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+#registeredMember td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+#registered {
+  color: white;
+}
+
+#show-page {
+  color: white;
+}
+
+/* views/class/new */
+
+#enterClass {
+  color: white;
+}
+
+.newClassLabel {
+  color: #d73cbe;
+}
+
+.newClassSelect {
+  border: 2px solid #f8f8ff;
+  border-radius: 5px;
+  width: 250px;
+  height: 30px;
+  text-align: center;
+}
+
+#newClassBtn {
+  border-radius: 5px;
+  border: none;
+  width: 150px;
+  height: 30px;
+}
+
+/* views/list */
+
+#listTable {  
+  border-collapse: collapse;
+  border: 1px solid #ddd;;
+  width: 100%;
+}
+
+#listTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+#listTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+/* views/register */
+
+#bookClass {
+  color: white;
+}
+
+.registerField {
+  width: 250px;
+  height: 30px;
+  border: 2px solid #f8f8ff;
+  text-align: center;
+}
+
+#bookClassBtn {
+  border: none;
+  width: 150px;
+  height: 25px;
+}

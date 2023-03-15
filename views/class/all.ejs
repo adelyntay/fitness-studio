@@ -1,12 +1,15 @@
 <%- include('../partials/header') %>
 
-<h2>Class List</h2>
-<table>
+<h2 id="allClasses">Class List</h2>
+<table id="timetable">
   <thead>
     <tr>
       <th>Class Type</th>
       <th>Instructor</th>
       <th>Date</th>
+      <th>Details</th>
+      <th>Edit</th>
+      <th>Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -21,7 +24,7 @@
           <a href="<%=classLink%>">Edit</a>
         </td>
        <td><form action="/class/<%= m._id %>?_method=DELETE" method="POST">
-          <button>Delete</button>
+          <button id="delete">Delete</button>
         </form></td> 
       </tr>
       <% }); %>

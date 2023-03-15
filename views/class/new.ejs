@@ -1,41 +1,48 @@
-<h2>Enter a New Class</h2>
+<%- include('../partials/header') %>
+
+<h2 id="enterClass">Enter a New Class</h2>
 
 <form action="/class" method="POST">
 
-  <label>Class Type:
-    <select name="classType">
+  <label class="newClassLabel">Class Type:
+    <select class="newClassSelect" name="classType">
       <option value="Yoga">Yoga</option>
       <option value="Pilates">Pilates</option>
       <option value="Cycle">Cycle</option>
       <option value="BodyCombat">BodyCombat</option>
     </select>
-  </label><br />
+  </label>
+  <br /><br/>
 
-  <label>Instructor
-    <select name="instructor">
+  <label class="newClassLabel">Instructor:
+    <select class="newClassSelect" name="instructor">
       <option value="Harry">Harry</option>
       <option value="Hermione">Hermione</option>
       <option value="Voldemort">Voldemort</option>
       <option value="Snape">Snape</option>
       <option value="Ron">Ron</option>
     </select>
-  </label><br />
+  </label>
+  <br /><br/>
 
-  <label>Level
-    <select name="level">
+  <label class="newClassLabel">Level:
+    <select class="newClassSelect" name="level">
       <option value="Beginner">Beginner</option>
       <option value="Intermediate">Intermediate</option>
       <option value="Beast">Beast</option>
     </select>
-  </label><br />
+  </label>
+  <br /><br/>
 
-  <label>Date:
+  <label class="newClassLabel">Date:
     <input type="datetime-local" name="date">
-  </label><br />
+  </label>
+  <br /><br/>
 
-  <label>Duration:
+  <label class="newClassLabel">Duration:
     <input name="duration" value="45 mins">
-  </label><br />
+  </label>
+  <br /><br/>
 
-  <button type="submit">Add Class</button>
+  <button id="newClassBtn" type="submit">Add Class</button>
 </form>
