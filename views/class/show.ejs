@@ -20,10 +20,11 @@
       </tr>
     </thead>
     <tbody>
-      
+      <% classes.registration.forEach(function(r) { %>
       <tr>
-       <td></td>
-      <td></td>
+       <td><%= r.name %></td>
+      <td><%= r.email %></td>
       </tr>
+      <% }); %>
     </tbody>
   </table>
