@@ -7,7 +7,6 @@ module.exports = {
   signup,
   create,
   login,
-  // secret,
   homepage,
   isAuth,
   logSession,
@@ -49,8 +48,7 @@ async function login(req, res) {
   
   const user = await User.findOne({ email }).exec();
   if (user === null) {
-    const context = { msg: 'No user' };
-    res.render('user/login', context);
+    res.render('user/login');
     return;
   }
   
@@ -62,8 +60,7 @@ async function login(req, res) {
       console.log(`${user.email}, ${user.role} logged in.`);
       res.redirect(redirectUrl); 
     } else {
-      const context = { msg: 'password wrong' };
-      res.render('user/login', context);
+      res.render('user/login');
     }
   });
 }
