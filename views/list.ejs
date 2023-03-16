@@ -10,6 +10,10 @@
   </select>
 </form>
 
+<form action="/user/logout" method="get">
+  <button id="logoutList" type="submit">Logout</button>
+</form>
+
 <h2>Class List</h2>
 <table id="listTable">
   <thead>
@@ -30,7 +34,7 @@
         <td><%= classDoc.level %></td>
         <td><%= classDoc.date %></td>
         <td><%= classDoc.duration %></td>
-        <td><a href="/register/<%= classDoc._id %>">Register</a></td>
+        <td><button id="register"><a id="registerLink" href="/register/<%= classDoc._id %>">Register</a></button></td>
       </tr>
       <% }); %>
   </tbody>

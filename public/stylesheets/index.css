@@ -1,18 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Carter+One&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&display=swap');
+
+body {
+  background-image: url('/images/company.png');
+  background-size: cover;
+}
+
 #loginBtn {
-  width: 250px;
+  width: 200px;
   border: none; 
   border-radius: 10px;
-  background-color: #5e376d;
   padding: 8px 32px;
   font-size: 18px;
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-left: 640px;
+  background-color: white;
 }
 
 a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
-a:hover {
-    color: hotpink;
-  }
+h1 {
+  color: white;
+  font-family: 'Anton', sans-serif; 
+  margin-top: 80px;
+  margin-left: 250px;
+  font-size: 120px;
+}
+
+p {
+  color: white;
+  font-family: 'Edu NSW ACT Foundation', cursive;
+  margin-left: 250px;
+  font-size: 30px;
+} 
