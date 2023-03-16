@@ -17,10 +17,6 @@ router.get('/list', async function(req, res) {
   res.render('list', { classes, classTypes, selectedFilter: filter });
 });
 
-/* const classes = await Class.find(filter ? { classType: filter } : {}).exec();
-const classTypes = await Class.distinct('classType').exec();
-res.render('class/all', { title: 'All Classes', classes, classTypes, selectedFilter: filter });*/
-
 router.get('/register/:id', async function(req, res, next) {
   const Class = require('../models/class');
   const classDoc = await Class.findById(req.params.id);

@@ -1,5 +1,6 @@
   const User = require('../models/user');
   const bcrypt = require('bcrypt');
+const user = require('../models/user');
   const saltRounds = 10;
 
   module.exports = {
@@ -8,7 +9,9 @@
       create,
       login,
       // secret,
-      homepage
+      homepage,
+      isAuth,
+      logSession
   };
 
   function loginPage(req, res) {
@@ -54,7 +57,9 @@
     bcrypt.compare(password, user.password, (err, result) => {
       if (result) {
         req.session.user = user;
+        console.log(req.session.user);
         const redirectUrl = user.role === 'admin' ? '/admin' : '/user/homepage';
+        console.log(`${user.email}, ${user.role} logged in.`);
         res.redirect(redirectUrl); 
       } else {
         const context = { msg: 'password wrong' };
@@ -62,13 +67,26 @@
       }
     });
   }
+
+  async function isAuth(req, res, next) {
+    const user = req.session.user;
+    console.log('user:', user);
+    if (user && user.role === 'admin') {
+      return next();
+    } else {
+      const context = { message: 'Restricted Access',
+      error: {
+        status: 403,
+        stack: 'Access Denied'
+      }
+    };
+      res.render('error', context);
+    }
+  }
   
-  // function secret(req, res) {
-  //   console.log('session:', req.session.anything);
-  //   if (req.session.anything) {
-  //     res.send('Secret Page');
-  //   } else {
-  //     res.send('Sorry');
-  //   }
-  // }
+  function logSession(req, res, next) {
+    console.log(req.session);
+    next();
+  }
+
   

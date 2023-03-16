@@ -1,0 +1,18 @@
+#loginBtn {
+  width: 250px;
+  border: none; 
+  border-radius: 10px;
+  background-color: #5e376d;
+  padding: 8px 32px;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+    color: hotpink;
+  }

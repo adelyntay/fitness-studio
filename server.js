@@ -25,9 +25,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 app.use(session({
-  secret: 'testing-123',
+  secret: 'projecttwo',
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: false
 }));
 
 
@@ -48,7 +48,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error', {error: err});
 });
 
 module.exports = app;

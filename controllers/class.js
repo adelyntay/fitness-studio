@@ -8,6 +8,7 @@ module.exports = {
   edit,
   update,
   show,
+  
 };
 
 function newClass(req, res) {
