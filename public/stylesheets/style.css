@@ -76,7 +76,7 @@ a {
   color: #345E5C;
   font-size: 18px;
   font-weight: bold;
-  position: relative;
+  margin-top: 5px;
 }
 
 #classFilter {
@@ -110,7 +110,7 @@ a {
 }
 
 #allClasses {
-  color: #345E5C;
+  color: black;
 }
 
 #delete{
@@ -155,7 +155,7 @@ a {
 /* views/class/new */
 
 #enterClass {
-  color: #345E5C;
+  color: black;
 }
 
 .newClassLabel {
@@ -278,7 +278,7 @@ li a:hover {
 }
 
 #logout {
-  border: none;
+  border: none; 
   background-color: #345E5C;
   color: white;
   width: 90px;

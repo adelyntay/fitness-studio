@@ -1,5 +1,12 @@
 <%- include('../partials/header') %>
 
+<ul id="all-ul">
+  <li><a href="/class/new">Add New Class</a></li>
+  <li><form action="/user/logout" method="get">
+    <button id="logout" type="submit">Logout</button>
+  </form></li>
+  </ul>
+
 <form method="GET">
   <label id="classTypeFilter" for="classTypeFilter">Class</label><br/>
   <select id="classFilter" name="classType" onchange="this.form.submit()">
@@ -9,13 +16,6 @@
     <% }); %>
   </select> 
 </form>
-
-<ul id="all-ul">
-  <li><a href="/class/new">Add New Class</a></li>
-  <li><form action="/user/logout" method="get">
-    <button id="logout" type="submit">Logout</button>
-  </form></li>
-  </ul>
 
 <h2 id="allClasses">Class List</h2>
 <table id="timetable">

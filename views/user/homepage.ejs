@@ -1,10 +1,14 @@
 <%- include('../partials/header') %>
 
   <body>
-    
-    <a href="/list">View All Class</a>
-    <form action="/user/logout" method="get">
-      <button type="submit">Logout</button>
+    <h1>Welcome Back!</h1>
+    <ul>
+    <li><a href="/list">View All Class</a></li>
+    <li><form action="/user/logout" method="get">
+      <button id= "logout" type="submit">Logout</button></form></li>
     </form>
+    </ul>
   </body>
 </html>
+
+<%- include('../partials/footer') %>

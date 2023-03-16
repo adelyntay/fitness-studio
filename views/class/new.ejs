@@ -1,5 +1,12 @@
 <%- include('../partials/header') %>
 
+<ul id="newclass-ul">
+  <li><a href="/class/all">All Class</a></li>
+  <li><form action="/user/logout" method="get">
+    <button id="logout" type="submit">Logout</button>
+  </form></li>
+  </ul>
+
 <h2 id="enterClass">Enter a New Class</h2>
 
 <form action="/class" method="POST">
