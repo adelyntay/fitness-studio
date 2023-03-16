@@ -14,4 +14,6 @@ router.post('/login', userCtrl.login);
 
 router.get('/homepage', userCtrl.homepage);
 
+router.get('/logout', userCtrl.logout);
+
 module.exports = router;
