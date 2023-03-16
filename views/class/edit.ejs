@@ -1,10 +1,17 @@
 <%- include('../partials/header') %>
 
+<ul id="editclass-ul">
+  <li><a href="/class/all">All Class</a></li>
+  <li><form action="/user/logout" method="get">
+    <button id="logout" type="submit">Logout</button>
+  </form></li>
+  </ul>
+
 <h2>Edit Details</h2>
 <form action="/class/<%=id%>?_method=PUT" method="POST">
 
     <label>Class Type:
-      <select name="classType">
+      <select class="newClassSelect" name="classType">
         <option value="Yoga">Yoga</option>
         <option value="Pilates">Pilates</option>
         <option value="Cycle">Cycle</option>
@@ -13,22 +20,32 @@
     </label><br />
 
     <label>Instructor:
-      <input type="text" name="instructor">
+      <select class="newClassSelect" name="instructor">
+        <option value="Harry">Harry</option>
+        <option value="Hermione">Hermione</option>
+        <option value="Voldemort">Voldemort</option>
+        <option value="Snape">Snape</option>
+        <option value="Ron">Ron</option>
+    </select>
     </label><br />
 
     <label>Level:
-      <input type="text" name="level">
+      <select class="newClassSelect" name="level">
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Beast">Beast</option>
+      </select>
     </label><br />
 
     <label>Date:
-      <input type="date" name="date">
+      <input type="datetime-local" name="date">
     </label><br />
 
-    <label>Duration:
-      <input name="duration">
-    </label><br />
-    
-    <button type="submit">Save Changes</button>
+    <label class="newClassLabel">Duration:
+      <input name="duration" value="45 mins">
+    </label><br /><br/>
+
+    <button id="newClassBtn" type="submit">Save Changes</button>
   
   </form>
 

@@ -1,5 +1,12 @@
 <%- include('../partials/header') %>
 
+<ul id="showclass-ul">
+  <li><a href="/class/all">All Class</a></li>
+  <li><form action="/user/logout" method="get">
+    <button id="logout" type="submit">Logout</button>
+  </form></li>
+  </ul>
+
 <section id="show-page">
     <p>Class Type: <%= classes.classType %></p> 
     <p>Instructor: <%= classes.instructor %></p> 
