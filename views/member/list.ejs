@@ -1,4 +1,5 @@
-<%- include('./partials/header') %>
+<%- include('../partials/header') %>
+
 
 <form method="GET">
   <label id="classTypeFilter" for="classTypeFilter">Class</label><br/>
@@ -32,7 +33,7 @@
         <td><%= classDoc.classType %></td>
         <td><%= classDoc.instructor %></td>
         <td><%= classDoc.level %></td>
-        <td><%= classDoc.date %></td>
+        <td><%= dayjs(classDoc.date).format("D MMM YY HH:mm a") %></td>
         <td><%= classDoc.duration %></td>
         <td><button id="register"><a id="registerLink" href="/register/<%= classDoc._id %>">Register</a></button></td>
       </tr>
