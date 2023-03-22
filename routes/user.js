@@ -10,8 +10,6 @@ router.post('/', userCtrl.create);
 
 router.post('/login', userCtrl.login);
 
-// router.get('/secret', userCtrl.secret);
-
 router.get('/homepage', userCtrl.homepage);
 
 router.get('/logout', userCtrl.logout);

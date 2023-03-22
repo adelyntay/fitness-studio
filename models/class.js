@@ -27,7 +27,6 @@ const classSchema = new Schema({
     },
   date: {
     type: Date,
-    timezone: false
   },
   duration: {
     type: String, 
