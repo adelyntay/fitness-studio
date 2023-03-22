@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const dayjs = require("dayjs");
 
 router.get('/', function(req, res, next) {
   res.render('index');
@@ -14,13 +15,13 @@ router.get('/list', async function(req, res) {
   const filter = req.query.classType || '';
   const classes = await Class.find(filter ? { classType: filter } : {}).exec();
   const classTypes = await Class.distinct('classType').exec();
-  res.render('list', { classes, classTypes, selectedFilter: filter });
+  res.render('member/list', { classes, classTypes, dayjs, selectedFilter: filter });
 });
 
 router.get('/register/:id', async function(req, res, next) {
   const Class = require('../models/class');
   const classDoc = await Class.findById(req.params.id);
-  res.render('register', { classDoc });
+  res.render('member/register', { classDoc });
 });
 
 router.post('/register/:id', async function(req, res) {

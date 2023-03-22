@@ -34,7 +34,7 @@
       <tr>
         <td><%= m.classType %></td>
         <td><%= m.instructor %></td>
-        <td><%= m.date %></td>
+        <td><%= dayjs(m.date).format("D MMM YY HH:mm a") %></td>
         <td><a href="/class/details/<%= m.id %>">Details</a></td>
         <td>
           <% const classLink = `/class/${m._id}`%>

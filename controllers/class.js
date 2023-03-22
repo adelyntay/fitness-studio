@@ -1,4 +1,5 @@
 const Class = require('../models/class');
+const dayjs = require("dayjs");
 
 module.exports = {
 	new: newClass,
@@ -29,7 +30,7 @@ async function index(req, res) {
   const filter = req.query.classType || '';
   const classes = await Class.find(filter ? { classType: filter } : {}).exec();
   const classTypes = await Class.distinct('classType').exec();
-  res.render('class/all', { title: 'All Classes', classes, classTypes, selectedFilter: filter });
+  res.render('class/all', { title: 'All Classes', classes, classTypes, dayjs, selectedFilter: filter });
 }
 
 async function del(req, res) {
