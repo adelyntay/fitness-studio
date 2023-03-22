@@ -12,28 +12,28 @@
 
     <label>Class Type:
       <select class="newClassSelect" name="classType">
-        <option value="Yoga">Yoga</option>
-        <option value="Pilates">Pilates</option>
-        <option value="Cycle">Cycle</option>
-        <option value="BodyCombat">BodyCombat</option>
+        <option value="Yoga" <%= classes.classType === 'Yoga' ? 'selected' : '' %>>Yoga</option>
+        <option value="Pilates" <%= classes.classType === 'Pilates' ? 'selected' : '' %>>Pilates</option>
+        <option value="Cycle" <%= classes.classType === 'Cycle' ? 'selected' : '' %>>Cycle</option>
+        <option value="BodyCombat" <%= classes.classType === 'BodyCombat' ? 'selected' : '' %>>BodyCombat</option>
       </select>
     </label><br />
 
     <label>Instructor:
       <select class="newClassSelect" name="instructor">
-        <option value="Harry">Harry</option>
-        <option value="Hermione">Hermione</option>
-        <option value="Voldemort">Voldemort</option>
-        <option value="Snape">Snape</option>
-        <option value="Ron">Ron</option>
+        <option value="Harry" <%= classes.instructor === 'Harry' ? 'selected' : '' %>>Harry</option>
+        <option value="Hermione" <%= classes.instructor === 'Hermione' ? 'selected' : '' %>>Hermione</option>
+        <option value="Voldemort" <%= classes.instructor === 'Voldemort' ? 'selected' : '' %>>Voldemort</option>
+        <option value="Snape" <%= classes.instructor === 'Snape' ? 'selected' : '' %>>Snape</option>
+        <option value="Ron" <%= classes.instructor === 'Ron' ? 'selected' : '' %>>Ron</option>
     </select>
     </label><br />
 
     <label>Level:
       <select class="newClassSelect" name="level">
-        <option value="Beginner">Beginner</option>
-        <option value="Intermediate">Intermediate</option>
-        <option value="Beast">Beast</option>
+        <option value="Beginner" <%= classes.level === 'Beginner' ? 'selected' : '' %>>Beginner</option>
+        <option value="Intermediate" <%= classes.level === 'Intermediate' ? 'selected' : '' %>>Intermediate</option>
+        <option value="Beast" <%= classes.level === 'Beast' ? 'selected' : '' %>>Beast</option>
       </select>
     </label><br />
 
